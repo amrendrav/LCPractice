@@ -5,8 +5,9 @@ import java.util.Arrays;
 public class BinarySearch_Recursive {
 
     public static void main(String[] args) {
-        int[] iArr = {19, 2, 5, 8, 7, 4};
-        System.out.println(findIndexOfGivenNumber(iArr, 7, 0, iArr.length-1));
+        //int[] iArr = {19, 2, 5, 8, 7, 4};
+        int[] iArr = {4,5,6,7,0,1,2};
+        System.out.println(findIndexOfGivenNumber(iArr, 0, 0, iArr.length-1));
     }
 
     private static int findIndexOfGivenNumber(int[] iArr, int key, int startIndex, int endIndex) {

@@ -4,6 +4,8 @@ package educative.arrays;
 Problem statement:
 Given an array of integers and a window of size w, find the current maximum value in the window as the window slides through the entire array.
 Consider the array provided below. Let’s try to find all maximums for a window size = 3.
+Input Array: [10, 6, 9, -3, 23, -1, 34, 56, 67, -1, -4, -8, -2, 9, 10, 34, 67]
+Ans: [10, 9, 23, 23, 34, 56, 67, 67, 67, -1, -2, 9, 10, 34, 67]
  */
 
 import java.util.ArrayDeque;

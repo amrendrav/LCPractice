@@ -9,7 +9,8 @@ public class ReversedLinkedList {
     }
 
     public Node reversedNode(Node inputNode){
-        Node reversed = null;
+        //Iterative
+        /*Node reversed = null;
         Node current = inputNode;
         while (inputNode != null){
             Node tempNode = inputNode.next;
@@ -17,6 +18,22 @@ public class ReversedLinkedList {
             reversed = current;
             current = tempNode;
         }
-        return reversed;
+        return reversed;*/
+        Node result = null;
+        while(inputNode != null){
+            Node nextNode = inputNode.next;
+            inputNode.next = result;
+            result = inputNode;
+            inputNode = nextNode;
+
+        }
+        return result;
+
+        //recursive solution
+       /* if(inputNode == null || inputNode.next == null )return inputNode;
+        Node reversedList = reversedNode(inputNode.next);
+        inputNode.next.next = inputNode;
+        inputNode.next = null;
+        return reversedList;*/
     }
 }

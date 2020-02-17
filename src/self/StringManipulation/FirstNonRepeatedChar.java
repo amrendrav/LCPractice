@@ -11,7 +11,7 @@ public class FirstNonRepeatedChar {
     }
 
     private static char firstNonRepeatingChar_HashMap(final String inputString){
-        final HashMap<Character, Integer> countMap = new HashMap<>();
+        final HashMap<Character, Integer> countMap = new LinkedHashMap<>();
         for (int i = 0 ; i < inputString.length(); i ++){
             if(countMap.containsKey(inputString.charAt(i))){
                 countMap.put(inputString.charAt(i), countMap.get(inputString.charAt(i)) + 1);
@@ -20,16 +20,16 @@ public class FirstNonRepeatedChar {
             }
         }
 
-        /*Doesn't works because HashMap is non-ordered
+        /*Doesn't works because HashMap is non-ordered*/
         for (Map.Entry<Character, Integer> entry : countMap.entrySet()){
             if(entry.getValue() > 1)continue;
             else return entry.getKey();
-        }*/
+        }
 
-        for (int i = 0 ; i < inputString.length(); i ++){
+        /*for (int i = 0 ; i < inputString.length(); i ++){
             if(countMap.get(inputString.charAt(i)) > 1) continue;
             else return inputString.charAt(i);
-        }
+        }*/
 
         throw new RuntimeException(String.format("Input string %s doesn't contain any unique chars", inputString));
     }

@@ -19,7 +19,7 @@ public class ReverseSentenceWords {
     }
 
     private static char[] reverseArray(char[] inputArray){
-        System.out.println("Input Array : " + inputArray);
+        //System.out.println("Input Array : " + inputArray);
         for (int i = 0; i < inputArray.length/2; i++) {
             char temp = inputArray[i];
             inputArray[i] = inputArray[inputArray.length - 1 -i];
