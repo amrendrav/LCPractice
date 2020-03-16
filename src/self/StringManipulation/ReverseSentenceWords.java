@@ -1,11 +1,15 @@
 package self.StringManipulation;
 
+import java.util.regex.Pattern;
+
 public class ReverseSentenceWords {
 
     final static String toBeReversed = "My Name is Anthony Gonjalvis";
 
     public static void main(String[] args) {
-        System.out.println(reverseWordsOFSentence(toBeReversed));
+
+       // System.out.println(reverseWordsOFSentence(toBeReversed));
+        System.out.println(reversedWords(toBeReversed));
     }
 
     private static String reverseWordsOFSentence(String toBeReversed){
@@ -28,5 +32,20 @@ public class ReverseSentenceWords {
         System.out.println("Output Array : " + inputArray);
         return inputArray;
     }
+
+    private static String reversedWords(String inputString) {
+        Pattern pattern = Pattern.compile("\\s");
+        String[] sArray = pattern.split(inputString);
+        String result = "";
+
+        for (int i = 0; i < sArray.length; i++) {
+            if (i == sArray.length - 1) {
+                result = sArray[i] + result;
+            } else
+                result = " " + sArray[i] + result;
+        }
+        return result;
+    }
+
 
 }
