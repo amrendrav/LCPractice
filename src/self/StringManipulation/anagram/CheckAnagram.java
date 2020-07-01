@@ -1,4 +1,4 @@
-package self.StringManipulation;
+package self.StringManipulation.anagram;
 
 import java.util.Arrays;
 

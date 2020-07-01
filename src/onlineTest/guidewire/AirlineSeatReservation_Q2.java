@@ -1,4 +1,4 @@
-package guidewire;
+package onlineTest.guidewire;
 
 public class AirlineSeatReservation_Q2 {
 

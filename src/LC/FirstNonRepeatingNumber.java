@@ -3,6 +3,7 @@ package LC;
 import java.security.InvalidParameterException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.IntStream;
 
 public class FirstNonRepeatingNumber {
 
@@ -14,13 +15,13 @@ public class FirstNonRepeatingNumber {
     private static char findFirstNonRepeatingChar(String inputString){
         char[] cArr = inputString.toCharArray();
         Map<Character, Integer> charCountMap = new HashMap<>();
-        for (int j = 0; j <  cArr.length; j++) {
-            //Break condition
-            if(charCountMap.containsKey(cArr[j])){
-                charCountMap.put( cArr[j], charCountMap.get(cArr[j]) + 1);
-            }else
+        //Break condition
+        IntStream.range(0, cArr.length).forEachOrdered(j -> {
+            if (charCountMap.containsKey(cArr[j])) {
+                charCountMap.put(cArr[j], charCountMap.get(cArr[j]) + 1);
+            } else
                 charCountMap.put(cArr[j], 1);
-        }
+        });
 
         System.out.println(charCountMap);
 

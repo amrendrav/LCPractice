@@ -6,6 +6,8 @@ import java.util.function.Predicate;
 
 public interface FITest {
 
+    public abstract void abc();
+
     List<String> getCompanies();
     List<String> getColleges();
 

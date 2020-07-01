@@ -1,3 +1,5 @@
+package onlineTest;
+
 public class GuideWire {
     public static void main(String[] args) {
         int[] t1 = {-3, -14, -5, 7, 8, 42, 8, 3};
@@ -28,6 +30,7 @@ public class GuideWire {
                 maxT = Integer.MIN_VALUE;
             }
         }
+
         return seasons[counter];
     }
 

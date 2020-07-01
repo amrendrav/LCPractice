@@ -1,7 +1,7 @@
 /*
 public class FinalFail {
 
-    public class GuideWire {
+    public class onlineTest.GuideWire {
         public static void main(String[] args) {
             int[] t1 = {-3, -14, -5, 7, 8, 42, 8, 3};
             int[] t2 = {2,-10,3, 1, 10, 8, 2, 5, 10, 9, 9, 18};
